@@ -1,0 +1,25 @@
+.recentlyPlayedCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 6px;
+}
+.artist {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9eacb9;
+}
+.img {
+  border-radius: 10px;
+}
+.settings {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

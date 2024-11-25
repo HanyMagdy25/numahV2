@@ -1,0 +1,20 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-end: 10px;
+}
+.headTitle {
+  margin-bottom: 20px;
+}
+.viewAll {
+  font-size: 15px;
+  font-weight: 600;
+  color: #425466;
+}
+.topPicks {
+  margin-bottom: 30px;
+}
+.divSwiper {
+  width: 100%;
+}
