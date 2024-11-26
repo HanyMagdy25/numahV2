@@ -1,5 +1,6 @@
 .sidebar {
   width: 20%;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 .logo {
