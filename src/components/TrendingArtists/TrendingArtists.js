@@ -34,7 +34,7 @@ const TrendingArtists = ({ data, headTitle }) => {
               },
             },
             330: {
-              slidesPerView: 1.5,
+              slidesPerView: 1.6,
               spaceBetween: 20,
               grid: {
                 rows: 2,

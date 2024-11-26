@@ -25,3 +25,9 @@
     height: 190px;
   }
 }
+@media screen and (max-width: 380px) {
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+}

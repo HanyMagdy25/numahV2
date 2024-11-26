@@ -12,3 +12,11 @@
 .img {
   border-radius: 12px;
 }
+
+/* Media Queries */
+@media screen and (max-width: 380px) {
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+}

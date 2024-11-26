@@ -16,7 +16,7 @@ const TopPicks = ({ data, headTitle }) => {
           slidesPerView={1}
           breakpoints={{
             0: {
-              slidesPerView: 1.5,
+              slidesPerView: 1.8,
               spaceBetween: 20,
             },
             410: {
