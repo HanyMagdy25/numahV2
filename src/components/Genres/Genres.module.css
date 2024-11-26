@@ -3,8 +3,6 @@
   justify-content: space-between;
   align-items: center;
   padding-inline-end: 10px;
-}
-.headTitle {
   margin-bottom: 20px;
 }
 .viewAll {
@@ -13,7 +11,7 @@
   color: #425466;
 }
 .topPicks {
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 .divSwiper {
   width: 100%;

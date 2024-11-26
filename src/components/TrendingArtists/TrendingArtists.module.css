@@ -7,3 +7,12 @@
 .headTitle {
   margin-bottom: 20px;
 }
+
+.divSwiper .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: row !important;
+}
+
+.swiper {
+  padding-bottom: 40px;
+}

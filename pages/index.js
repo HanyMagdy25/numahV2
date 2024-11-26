@@ -25,6 +25,8 @@ import artist1 from "@/src/assets/artists/image (4).png";
 import artist2 from "@/src/assets/artists/image (5).png";
 import artist3 from "@/src/assets/artists/image (6).png";
 import artist4 from "@/src/assets/artists/image (7).png";
+import { useState } from "react";
+import ArtistsLoopSwiper from "@/src/components/ArtistsLoopSwiper/ArtistsLoopSwiper";
 
 const inter = Inter({ subsets: ["latin"] });
 const topPicksData = [
@@ -259,6 +261,7 @@ const artistsData = [
   },
 ];
 export default function Home() {
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
     <>
       <Head>
@@ -269,9 +272,9 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.page}>
-          <Sidebar />
-          <main className={styles.mainContent}>
-            <Header />
+          <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+          <div className={styles.mainContent}>
+            <Header setShowSidebar={setShowSidebar} />
             <div>
               <div className={styles.tabs}>
                 <button className={`${styles.tab} ${styles.active}`}>
@@ -286,14 +289,19 @@ export default function Home() {
                 data={recentlyPlayedData}
                 headTitle="Recently Played"
               />
+              <ArtistsLoopSwiper data={artistsData} />
               <TrendingArtists
                 data={artistsData}
                 headTitle="Trending Artists"
               />
             </div>
-          </main>
+          </div>
           <Footer />
         </div>
+        <div
+          onClick={() => setShowSidebar(false)}
+          className={`${styles.overlay} ${showSidebar ? styles.active : ""}`}
+        />
       </main>
     </>
   );

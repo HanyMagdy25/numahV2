@@ -17,6 +17,7 @@ const GenresCard = ({ item }) => {
           <h3 className={styles.title}>{item.genre}</h3>
         </div>
       </div>
+      <h3 className={styles.titleMobile}>{item.genre}</h3>
     </div>
   );
 };

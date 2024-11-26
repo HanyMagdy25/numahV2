@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.css";
-import LogoImage from "../../../assets/logoImg.png";
+import LogoImage from "@/src/assets/logoImg.png";
 import Insta from "@/src/assets/social/Group.svg";
 import X from "@/src/assets/social/path1009.svg";
 import Facebook from "@/src/assets/social/Vector.svg";
@@ -38,9 +38,9 @@ const Footer = () => {
         <div className={styles.footerTop}>
           <div className={styles.footerLeft}>
             <div className={styles.logoCol}>
-              <div className={styles.logo}>
+              <Link href="/" className={styles.logo}>
                 <Image src={LogoImage} alt="Logo" />
-              </div>
+              </Link>
             </div>
             <div className={styles.group}>
               <h2 className={styles.headTitle}>Company</h2>

@@ -21,12 +21,15 @@ const RecentlyPlayed = ({ data, headTitle }) => {
               spaceBetween: 20,
             },
             576: {
-              slidesPerView: 1,
+              slidesPerView: 2,
             },
             768: {
               slidesPerView: 3,
             },
             1400: {
+              slidesPerView: 4,
+            },
+            1600: {
               slidesPerView: 5,
             },
           }}

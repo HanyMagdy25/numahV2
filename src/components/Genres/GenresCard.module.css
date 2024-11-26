@@ -30,11 +30,34 @@
   position: absolute;
   z-index: 99;
   filter: unset;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .img {
   border-radius: 12px;
+}
+/* media queries */
+@media screen and (max-width: 768px) {
+  .img {
+    border-radius: 12px;
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .content {
+    display: none;
+  }
+
+  .titleMobile {
+    color: #fff;
+    margin: 6px 0 6px 0;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    font-size: 20px;
+    font-weight: 600;
+  }
 }

@@ -13,9 +13,10 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-bottom: 30px;
 }
 .tab {
-  padding: 14px 30px;
+  padding: 16px 30px;
   border-radius: 30px;
   cursor: pointer;
   border: none;
@@ -23,13 +24,38 @@
   font-size: 15px;
   font-weight: 600;
   background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  transition: var(--transition);
 }
-.tab.active {
+.tab.active,
+.tab:hover {
   background-color: var(--primary-color);
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 67%);
+  z-index: 10;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Media Queries */
-@media screen and (max-width: 1200px) {
+/* @media screen and (min-width: 1200px) and (max-width: 1300px) {
+  .mainContent {
+    width: 75%;
+  }
+} */
+@media screen and (max-width: 1300px) {
   .mainContent {
     width: 75%;
   }

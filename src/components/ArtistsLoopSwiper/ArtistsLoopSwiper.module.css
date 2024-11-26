@@ -1,0 +1,31 @@
+.topPicks {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: -24px;
+}
+.divSwiper {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #414851;
+  rotate: -8deg;
+  min-width: 108%;
+}
+/* Media Queries */
+@media screen and (min-width: 786px) {
+  .topPicks {
+    display: none;
+  }
+}
+@media screen and (max-width: 786px) {
+  .topPicks {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .divSwiper {
+    height: 52px;
+  }
+}

@@ -1,0 +1,17 @@
+.topPicksCard {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 6px;
+}
+.img {
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+  border: 1px solid #fff;
+}

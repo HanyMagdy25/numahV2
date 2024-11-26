@@ -9,6 +9,7 @@ import GroupIcon from "../../../assets/Group.svg";
 import playlist1 from "@/src/assets/playlist1.png";
 import playlist2 from "@/src/assets/playlist2.png";
 import PlusPng from "@/src/assets/plus.png";
+import Closeicon from "@/src/assets/close.svg";
 
 const playListData = [
   {
@@ -54,11 +55,17 @@ const playListData = [
     title: "Slow",
   },
 ];
-const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+const Sidebar = ({ showSidebar, setShowSidebar }) => {
   return (
-    <div className={styles.sidebar}>
+    <div className={`${styles.sidebar} ${showSidebar ? styles.active : ""}`}>
       <div className={styles.logo}>
+        <button
+          className={styles.closeBtn}
+          aria-label="Close Sidebar"
+          onClick={() => setShowSidebar((prev) => !prev)}
+        >
+          <Closeicon fill="#9EACB9" width="14" height="14" />
+        </button>
         <Image src={LogoImage} alt="Logo" />
       </div>
       <div>

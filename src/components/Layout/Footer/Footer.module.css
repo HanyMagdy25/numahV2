@@ -71,9 +71,6 @@
   position: relative;
   min-height: 31px;
 }
-.logoCol {
-  display: flex;
-}
 .footerTop {
   display: flex;
   justify-content: space-between;

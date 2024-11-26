@@ -2,6 +2,7 @@
   width: 20%;
 }
 .logo {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,9 +155,24 @@
   cursor: pointer;
   outline: none;
 }
+.closeBtn {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 
 /* Media Queries */
-@media screen and (max-width: 1200px) {
+/* @media screen and (min-width: 1200px) and (max-width: 1300px) {
+  .sidebar {
+    width: 25%;
+  }
+} */
+@media screen and (max-width: 1300px) {
   .sidebar {
     width: 25%;
   }
@@ -174,8 +190,12 @@
     transition: var(--transition);
     transform: translateX(-150%);
     z-index: 400;
+    background-color: #fff;
   }
   .sidebar.active {
     transform: translateX(0%);
+  }
+  .closeBtn {
+    display: block;
   }
 }
