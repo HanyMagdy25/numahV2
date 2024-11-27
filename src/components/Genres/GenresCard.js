@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./GenresCard.module.css";
+import Link from "next/link";
 
 const GenresCard = ({ item }) => {
   return (
-    <div className={styles.genresCard}>
+    <Link href="/" className={styles.genresCard}>
       <Image
         src={item.image}
         alt="img1"
@@ -17,7 +18,7 @@ const GenresCard = ({ item }) => {
         <h3 className={styles.title}>{item.genre}</h3>
       </div>
       <h3 className={styles.titleMobile}>{item.genre}</h3>
-    </div>
+    </Link>
   );
 };
 

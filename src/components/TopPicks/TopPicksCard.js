@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./TopPicksCard.module.css";
-import img1 from "../../assets/image 1.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const TopPicksCard = ({ item }) => {
   return (
-    <div className={styles.topPicksCard}>
+    <Link href="/" className={styles.topPicksCard}>
       <Image
         src={item?.image}
         alt="img1"
@@ -17,7 +17,7 @@ const TopPicksCard = ({ item }) => {
         <h3 className={styles.title}>{item?.title}</h3>
         <h4 className={styles.artist}>{item?.artist}</h4>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -27,6 +27,7 @@ import artist3 from "@/src/assets/artists/image (6).png";
 import artist4 from "@/src/assets/artists/image (7).png";
 import { useState } from "react";
 import ArtistsLoopSwiper from "@/src/components/ArtistsLoopSwiper/ArtistsLoopSwiper";
+import Premium from "@/src/components/Premium/Premium";
 
 const inter = Inter({ subsets: ["latin"] });
 const topPicksData = [
@@ -294,8 +295,10 @@ export default function Home() {
                 data={artistsData}
                 headTitle="Trending Artists"
               />
+              <Premium />
             </div>
           </div>
+
           <Footer />
         </div>
         <div

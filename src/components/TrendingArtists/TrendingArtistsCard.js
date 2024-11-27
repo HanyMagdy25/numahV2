@@ -1,10 +1,11 @@
 import React from "react";
-import styles from "./TrendingArtistsCard.module.css";
 import Image from "next/image";
+import Link from "next/link";
+import styles from "./TrendingArtistsCard.module.css";
 
 const TrendingArtistsCard = ({ item }) => {
   return (
-    <div className={styles.topPicksCard}>
+    <Link href="/" className={styles.topPicksCard}>
       <Image
         src={item?.image}
         alt="img1"
@@ -16,7 +17,7 @@ const TrendingArtistsCard = ({ item }) => {
         <h3 className={styles.title}>{item?.title}</h3>
         <h4 className={styles.artist}>{item?.artist}</h4>
       </div>
-    </div>
+    </Link>
   );
 };
 

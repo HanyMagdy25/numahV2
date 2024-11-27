@@ -3,19 +3,42 @@
   align-items: center;
   gap: 12px;
 }
+.content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .title {
   font-size: 16px;
   font-weight: 600;
   color: #000;
   margin-bottom: 6px;
+  transition: var(--transition);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  line-clamp: 1;
+  text-overflow: ellipsis;
 }
 .artist {
   font-size: 12px;
   font-weight: 400;
   color: #9eacb9;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  text-overflow: ellipsis;
 }
+
 .img {
+  height: 66px;
+  width: 66px;
+  object-fit: cover;
   border-radius: 10px;
 }
 .settings {
@@ -23,4 +46,8 @@
   border: none;
   outline: none;
   margin-left: 16px;
+  cursor: pointer;
+}
+.content:hover .title {
+  color: var(--primary-color);
 }

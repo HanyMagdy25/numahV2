@@ -120,7 +120,6 @@
   justify-content: center;
 }
 .addPlaylist {
-  border: 1px solid #4254668e;
   background-color: transparent;
   padding: 10px 26px;
   display: flex;
@@ -133,15 +132,15 @@
   cursor: pointer;
   transition: var(--transition);
   outline: none;
+  border: 0.5px solid #42546680;
 }
 .addPlaylist:hover {
-  color: #425466;
+  /* color: #425466; */
+  background-color: var(--primary-color);
+  border: 0.5px solid var(--primary-color);
 }
-.addPlaylist img {
-  transition: var(--transition);
-}
-.addPlaylist:hover img {
-  rotate: 90deg;
+.settingsDiv {
+  margin-bottom: 30px;
 }
 .settings {
   border: none;
@@ -157,6 +156,7 @@
   cursor: pointer;
   outline: none;
 }
+
 .closeBtn {
   display: none;
   position: absolute;

@@ -3,17 +3,17 @@
   flex-wrap: wrap;
   font-family: var(--font-geist-sans);
 }
-
 .mainContent {
   width: 80%;
-  margin-bottom: 30px;
-  padding: 10px 16px;
+  margin-bottom: 0px;
+  /* padding: 10px 16px; */
 }
 .tabs {
   display: flex;
   gap: 20px;
   align-items: center;
   margin-bottom: 30px;
+  padding: 10px 16px;
 }
 .tab {
   padding: 16px 30px;

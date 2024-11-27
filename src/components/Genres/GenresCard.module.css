@@ -39,9 +39,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: var(--transition);
 }
 .titleMobile {
   display: none;
+  transition: var(--transition);
+}
+.genresCard:hover .title,
+.genresCard:hover .titleMobile {
+  color: var(--primary-color);
 }
 
 /* media queries */
@@ -61,9 +67,9 @@
     margin: 6px 0 6px 0;
     position: absolute;
     z-index: 99;
-    top: 50%;
+    bottom: 10px;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, 0%);
     font-size: 20px;
     font-weight: 600;
     display: block;

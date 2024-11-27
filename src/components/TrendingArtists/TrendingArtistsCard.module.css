@@ -6,11 +6,23 @@
   font-weight: 600;
   color: #000;
   margin: 6px 0 6px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  line-clamp: 1;
+  text-overflow: ellipsis;
 }
 .artist {
   color: #9eacb9;
   font-size: 12px;
   font-weight: 400;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  line-clamp: 1;
+  text-overflow: ellipsis;
 }
 .img {
   border-radius: 50%;

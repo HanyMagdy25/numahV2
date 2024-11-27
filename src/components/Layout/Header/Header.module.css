@@ -1,9 +1,13 @@
 .header {
+  border-bottom: 1px solid #edf2f7;
+  /* padding: 24px 0; */
+  margin-bottom: 30px;
+  padding: 0px 16px;
+}
+.headerInner {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #edf2f7;
-  padding: 24px 0;
-  margin-bottom: 30px;
+  padding-block: 24px;
   gap: 10px;
 }
 .left {
