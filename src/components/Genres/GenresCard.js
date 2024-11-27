@@ -13,9 +13,8 @@ const GenresCard = ({ item }) => {
         className={styles.img}
       />
       <div className={styles.content}>
-        <div className={styles.text}>
-          <h3 className={styles.title}>{item.genre}</h3>
-        </div>
+        <div className={styles.bg} />
+        <h3 className={styles.title}>{item.genre}</h3>
       </div>
       <h3 className={styles.titleMobile}>{item.genre}</h3>
     </div>

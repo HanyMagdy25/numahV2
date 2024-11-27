@@ -1,18 +1,26 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./Footer.module.css";
-import LogoImage from "@/src/assets/logoImg.png";
-import Insta from "@/src/assets/social/Group.svg";
+// Images and Icons
+import LogoIcon from "@/src/assets/logo.svg";
 import X from "@/src/assets/social/path1009.svg";
+import Insta from "@/src/assets/social/Group.svg";
 import Facebook from "@/src/assets/social/Vector.svg";
-const Footer = () => {
-  // const isActive = (path) => {
-  //   if (typeof window !== "undefined") {
-  //     return window.location.pathname.includes(path);
-  //   }
-  //   return false;
-  // };
 
+const FooterGroup = ({ title, links }) => (
+  <div className={styles.group}>
+    <h2 className={styles.headTitle}>{title}</h2>
+    <ul className={styles.ul}>
+      {links.map((item, index) => (
+        <li key={index}>
+          <Link href={item.href} className={styles.link}>
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+const Footer = () => {
   const companyData = [
     { label: "About", href: "/aboutUs" },
     { label: "Jobs", href: "/Jobs" },
@@ -26,7 +34,7 @@ const Footer = () => {
     { label: "Investors", href: "/Investors" },
     { label: "Brands", href: "/Brands" },
   ];
-  const usfulLinksData = [
+  const usefulLinksData = [
     { label: "Help", href: "/Help" },
     { label: "Gift", href: "/Gift" },
     { label: "Web Player", href: "/Web Player" },
@@ -39,66 +47,12 @@ const Footer = () => {
           <div className={styles.footerLeft}>
             <div className={styles.logoCol}>
               <Link href="/" className={styles.logo}>
-                <Image src={LogoImage} alt="Logo" />
+                <LogoIcon />
               </Link>
             </div>
-            <div className={styles.group}>
-              <h2 className={styles.headTitle}>Company</h2>
-              <div className={styles.parent}>
-                <ul className={styles.ul}>
-                  {companyData?.map((item, index) => (
-                    <li
-                      key={index}
-                      // className={`${styles.div8} ${
-                      //   isActive(item?.href) ? styles.active : ""
-                      // }`}
-                    >
-                      <Link href={item?.href} className={styles.link}>
-                        {item?.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className={styles.group}>
-              <h2 className={styles.headTitle}>Comminities</h2>
-              <div className={styles.parent}>
-                <ul className={styles.ul}>
-                  {communitiesData?.map((item, index) => (
-                    <li
-                      key={index}
-                      // className={`${styles.div8} ${
-                      //   isActive(item?.href) ? styles.active : ""
-                      // }`}
-                    >
-                      <Link href={item?.href} className={styles.link}>
-                        {item?.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className={styles.group}>
-              <h2 className={styles.headTitle}>Usful Links</h2>
-              <div className={styles.parent}>
-                <ul className={styles.ul}>
-                  {usfulLinksData?.map((item, index) => (
-                    <li
-                      key={index}
-                      // className={`${styles.div8} ${
-                      //   isActive(item?.href) ? styles.active : ""
-                      // }`}
-                    >
-                      <Link href={item?.href} className={styles.link}>
-                        {item?.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <FooterGroup title="Company" links={companyData} />
+            <FooterGroup title="Communities" links={communitiesData} />
+            <FooterGroup title="Useful Links" links={usefulLinksData} />
           </div>
           <div className={styles.footerRight}>
             <div className={styles.allIcons}>
