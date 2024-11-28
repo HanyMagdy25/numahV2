@@ -17,3 +17,7 @@
 .swiper {
   padding-bottom: 40px;
 }
+.swiper-grid .swiper-slide {
+  padding-bottom: 43px;
+  margin-bottom: 30px;
+}

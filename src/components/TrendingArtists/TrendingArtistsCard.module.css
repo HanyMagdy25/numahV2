@@ -20,7 +20,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 1; /* Number of lines to show */
+  -webkit-line-clamp: 1;
   line-clamp: 1;
   text-overflow: ellipsis;
 }
@@ -35,6 +35,9 @@
   .img {
     width: 190px;
     height: 190px;
+  }
+  .topPicksCard {
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 380px) {
