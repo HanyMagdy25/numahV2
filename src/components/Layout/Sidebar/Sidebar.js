@@ -1,15 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Sidebar.module.css";
+// Images and Icons
 import LogoIcon from "@/src/assets/logo.svg";
-import HomeIcon from "../../../assets/homeIcon.svg";
-import MusicIcon from "../../../assets/music-library-2.svg";
-import GroupIcon from "../../../assets/Group.svg";
-import playlist1 from "@/src/assets/playlist1.png";
-import playlist2 from "@/src/assets/playlist2.png";
+import HomeIcon from "@/src/assets/homeIcon.svg";
+import MusicIcon from "@/src/assets/music-library-2.svg";
+import GroupIcon from "@/src/assets/Group.svg";
 import PlusIcon from "@/src/assets/plus.svg";
 import Closeicon from "@/src/assets/close.svg";
 import SettingsIcon from "@/src/assets/settingsIcon.svg";
+import playlist1 from "@/src/assets/playlist1.png";
+import playlist2 from "@/src/assets/playlist2.png";
+
+const ICON_COLOR = "#A0AEC0";
 
 const playListData = [
   {
@@ -55,14 +58,24 @@ const playListData = [
     title: "Slow",
   },
 ];
+
+const SidebarItem = ({ href, Icon, label }) => (
+  <li className={styles.oneItemList}>
+    <Link href={href} className={styles.oneItem}>
+      <Icon fill={ICON_COLOR} />
+      <span>{label}</span>
+    </Link>
+  </li>
+);
 const Sidebar = ({ showSidebar, setShowSidebar }) => {
+  const toggleSidebar = () => setShowSidebar((prev) => !prev);
   return (
     <div className={`${styles.sidebar} ${showSidebar ? styles.active : ""}`}>
       <div className={styles.logo}>
         <button
           className={styles.closeBtn}
           aria-label="Close Sidebar"
-          onClick={() => setShowSidebar((prev) => !prev)}
+          onClick={toggleSidebar}
         >
           <Closeicon fill="#9EACB9" width="14" height="14" />
         </button>
@@ -70,24 +83,9 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
       </div>
       <div>
         <ul className={styles.mainList}>
-          <li className={styles.oneItemList}>
-            <Link href="/" className={styles.oneItem}>
-              <HomeIcon fill="#A0AEC0" />
-              <span>Home</span>
-            </Link>
-          </li>
-          <li className={styles.oneItemList}>
-            <Link href="/library" className={styles.oneItem}>
-              <MusicIcon fill="#A0AEC0" />
-              <span>Library</span>
-            </Link>
-          </li>
-          <li className={styles.oneItemList}>
-            <Link href="/playlist" className={styles.oneItem}>
-              <GroupIcon fill="#A0AEC0" />
-              <span>Playlist</span>
-            </Link>
-          </li>
+          <SidebarItem href="/" Icon={HomeIcon} label="Home" />
+          <SidebarItem href="/library" Icon={MusicIcon} label="Library" />
+          <SidebarItem href="/playlist" Icon={GroupIcon} label="Playlist" />
           <div className={styles.playList}>
             <ul className={styles.playListItems}>
               {playListData?.map((item, index) => (
